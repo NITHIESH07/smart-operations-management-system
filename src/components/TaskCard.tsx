@@ -107,7 +107,11 @@ export const TaskCard: React.FC<TaskCardProps> = ({
         <div className="mb-2">
           <span className="text-[11px] font-medium text-indigo-400 bg-indigo-950/40 px-2 py-0.5 rounded border border-indigo-900/40 inline-flex items-center space-x-1">
             <span className="text-slate-500">Project:</span>
-            <span>{typeof task.projectId === 'object' && task.projectId ? task.projectId.name : task.projectId}</span>
+            <span>
+  {typeof task.projectId === 'object' && task.projectId !== null
+    ? task.projectId.name
+    : String(task.projectId ?? '')}
+</span>
           </span>
         </div>
 

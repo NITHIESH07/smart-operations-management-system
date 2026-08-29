@@ -309,8 +309,10 @@ export const TaskDetailModal: React.FC<TaskDetailModalProps> = ({
                 <div className="bg-slate-950/60 p-3 rounded-xl border border-slate-800">
                   <span className="text-slate-500 block text-[10px] uppercase font-semibold mb-1">Parent Project</span>
                   <span className="text-slate-200 font-medium text-sm">
-                    {typeof task.projectId === 'object' && task.projectId ? task.projectId.name : task.projectId}
-                  </span>
+  {typeof task.projectId === 'object' && task.projectId !== null
+    ? task.projectId.name
+    : String(task.projectId ?? '')}
+</span>
                 </div>
 
                 <div className="bg-slate-950/60 p-3 rounded-xl border border-slate-800">
