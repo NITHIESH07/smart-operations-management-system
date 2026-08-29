@@ -430,7 +430,7 @@ export const TaskDetailModal: React.FC<TaskDetailModalProps> = ({
                       </div>
 
                       {/* Status Transition highlight */}
-                      {prevObj && newObj && prevObj.status && newObj.status && prevObj.status !== newObj.status && (
+                     {prevObj &&newObj &&Boolean(prevObj.status) &&Boolean(newObj.status) &&String(prevObj.status) !== String(newObj.status) && (
                         <div className="p-2 rounded bg-slate-900 border border-slate-800 text-[11px] flex items-center space-x-2">
                           <span className="text-slate-400">Status Change:</span>
                           <span className="font-mono text-slate-400 uppercase">{String(prevObj.status)}</span>
