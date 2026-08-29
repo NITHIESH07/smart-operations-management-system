@@ -379,26 +379,4 @@ npm run build
 npm run start
 ```
 
-In production mode, Express serves the generated frontend assets from `dist/` and returns `dist/index.html` for SPA routes.
 
-## Future Improvements
-
-Potential future work for this repository includes:
-
-- Add automated test coverage for frontend and backend flows
-- Add security middleware such as Helmet and rate limiting
-- Move token storage to a more secure cookie-based approach if the auth model changes
-- Add deployment configuration for containerized or hosted environments
-- Add CI/CD automation
-- Expand API documentation with request and response examples
-
-## Interview Talking Points
-
-- JWT authentication with explicit Bearer token verification
-- Role-based authorization for `admin`, `manager`, and `employee`
-- Mongoose model relationships across users, projects, tasks, comments, and activities
-- Clear route -> middleware -> controller -> model architecture
-- Server-enforced task status transition state machine
-- Audit logging for project and task lifecycle events
-- Employee-scoped access rules for projects and tasks
-- Project deletion guard to prevent removing projects with dependent tasks
